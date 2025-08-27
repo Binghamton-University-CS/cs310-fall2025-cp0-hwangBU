@@ -1,24 +1,9 @@
 #include <iostream>
 #include <stdlib.h>
+#include "Animal.h"
+#include "AnimalsInZoo.h"
 using namespace std;
 
-class Animal {
-   public:
-      Animal(string speciesName, unsigned int discoveryYear) {
-         species = speciesName;
-         year_discovered = discoveryYear;
-      }
-
-      Animal() : species(""), year_discovered(0) {};
-
-      void display() {
-         cout << species << " [" << year_discovered << "]" << endl;
-      }
-
-   private:
-      string species = "";
-      unsigned int year_discovered = 0;
-};
 
 int main() {
    Animal *animal1 = new Animal("African Elephant", 1758);
@@ -27,8 +12,17 @@ int main() {
    delete animal1;
    animal1 = new Animal("Snow Leopard", 1777);
 
+//new animal added
+   Animal animal3("Zebra", 1778);
+   animal3.display();
+
+
    animal2.display();
    animal1->display();
+
+// Create AnimalsInZoo object with animal2
+   AnimalsInZoo zoo1(animal2);
+   zoo1.display();
 
    delete animal1;
 }
