@@ -5,10 +5,12 @@
 using namespace std;
 
 
-class Animal {
+class Animal 
+{
    public:
       Animal(string speciesName, unsigned int discoveryYear);
       Animal();
+
       void display() const;
 
    private:
