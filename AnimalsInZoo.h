@@ -3,16 +3,23 @@
 
 #include "Animal.h"
 
-class AnimalsInZoo {
+class AnimalsInZoo 
+{
 private:
     int numAnimals;
     Animal animal;
 
 public:
-    AnimalsInZoo();                      // Default constructor (no animal)
-    AnimalsInZoo(const Animal& a);      // Constructor with one animal
 
-    void display() const;               // Display info
+//Default constructor (no animal)
+    AnimalsInZoo();
+
+ // Constructor with one animal
+    AnimalsInZoo(const Animal& a);
+
+// Display info
+    void display() const;
+
 };
 
 #endif // ANIMALSINZOO_H
