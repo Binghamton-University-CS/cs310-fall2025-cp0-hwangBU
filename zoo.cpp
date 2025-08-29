@@ -5,7 +5,8 @@
 using namespace std;
 
 
-int main() {
+int main() 
+{
    Animal *animal1 = new Animal("African Elephant", 1758);
    Animal animal2("Giant Panda", 1869);
 
